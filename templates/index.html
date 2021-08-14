@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price</title>
+</head>
+<body>
+    <h1>Predict Car Price</h1>
+
+    <form action="/predict" method="POST">
+        <p>Showroom Price of car</p>
+        <input type="number" name="pPrice" placeholder="Showroom Price">
+    </tr>
+        <p>Distance driven(Km)</p>
+        <input type="number" name="kmsDriven" placeholder="Distance in Km">
+    </tr>
+        <p>Number of Owners(0/1/2/3)</p>
+        <input type="number" name="noOfOwners" placeholder="No of Owners">
+    </tr>
+        <p>Age of Car(in Years)</p>
+        <input type="number" name="carAge" placeholder="Age of car">
+</br>
+        <p>Is Car runs on diesel(1/0)</p>
+        <input type="number" name="diesel" placeholder="Diesel(1/0)">
+    </tr>
+        <p>Is Car runs on petrol(1/0)</p>
+        <input type="number" name="petrol" placeholder="Petrol(1/0)">
+    </tr>
+        <p>Dealer type - Individual(1/0)</p>
+        <input type="number" name="individual" placeholder="Individual(1/0)">
+    </tr>
+        <p>Car Gear type - Manual(1/0)</p>
+        <input type="number" name="manual" placeholder="Manual(1/0)">
+</br>
+</br>
+        <input type="submit">
+
+    </form>
+
+</br>
+</br>
+    <h3>{{ selling_price }}</h3>
+    
+</body>
+</html>
