@@ -5,13 +5,14 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
+from sklearn.tree import DecisionTreeRegressor
 
 def price_prediction(pPrice, kmsDriven, noOfOwners, carAge, diesel, petrol, individual, manual):
     X = pd.read_csv('X_train.csv')
     y = pd.read_csv('y_train.csv')
 
-    lgr = LinearRegression()
-    lgr.fit(X,y)
+    dtr = LinearRegression()
+    dtr.fit(X,y)
 
     data_lst = [pPrice, kmsDriven, noOfOwners, carAge, diesel, petrol, individual, manual]
     dic = {}
@@ -20,7 +21,7 @@ def price_prediction(pPrice, kmsDriven, noOfOwners, carAge, diesel, petrol, indi
 
     testing_df = pd.DataFrame(dic, index=[0])
 
-    return round(lgr.predict(testing_df)[0][0],2)
+    return round(dtr.predict(testing_df)[0][0],2)
 
 
 '''
